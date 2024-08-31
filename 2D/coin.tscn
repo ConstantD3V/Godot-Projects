@@ -1,0 +1,48 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://coins/tile000.png" type="Texture" id=1]
+[ext_resource path="res://coins/tile001.png" type="Texture" id=2]
+[ext_resource path="res://coins/tile006.png" type="Texture" id=3]
+[ext_resource path="res://coins/tile007.png" type="Texture" id=4]
+[ext_resource path="res://coins/tile005.png" type="Texture" id=5]
+[ext_resource path="res://coins/tile004.png" type="Texture" id=6]
+[ext_resource path="res://coins/tile012.png" type="Texture" id=7]
+[ext_resource path="res://coins/tile003.png" type="Texture" id=8]
+[ext_resource path="res://coins/tile008.png" type="Texture" id=9]
+[ext_resource path="res://coins/tile009.png" type="Texture" id=10]
+[ext_resource path="res://coins/tile014.png" type="Texture" id=11]
+[ext_resource path="res://coins/tile010.png" type="Texture" id=12]
+[ext_resource path="res://coins/tile011.png" type="Texture" id=13]
+[ext_resource path="res://coins/tile013.png" type="Texture" id=14]
+[ext_resource path="res://coins/tile002.png" type="Texture" id=15]
+[ext_resource path="res://coin.gd" type="Script" id=16]
+[ext_resource path="res://coin_SFX.wav" type="AudioStream" id=17]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 15 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 14 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 12.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 9.05539
+
+[node name="coin" type="Node2D"]
+script = ExtResource( 16 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://Traps.tscn" type="PackedScene" id=3]
+[ext_resource path="res://spike.tscn" type="PackedScene" id=4]
+[ext_resource path="res://checkpoint.tscn" type="PackedScene" id=5]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=7]
+
+[node name="level" type="Node2D"]
+position = Vector2( 120.779, 111.244 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -131038, 0, 0, -131037, 5, 0, -65526, 0, 0, -65525, 4, 0, -65524, 4, 0, -65523, 4, 0, -65522, 4, 0, -65521, 5, 0, -65502, 7, 0, -65501, 1, 0, 10, 10, 0, 11, 9, 0, 12, 9, 0, 13, 9, 0, 14, 9, 0, 15, 11, 0, 34, 7, 0, 35, 1, 0, 65570, 7, 0, 65571, 1, 0, 131078, 26, 0, 131106, 7, 0, 131107, 1, 0, 196642, 7, 0, 196643, 1, 0, 262164, 0, 0, 262165, 5, 0, 262178, 7, 0, 262179, 1, 0, 327688, 26, 0, 327689, 26, 0, 327700, 10, 0, 327701, 11, 0, 327714, 7, 0, 327715, 1, 0, 393244, 0, 0, 393245, 4, 0, 393246, 4, 0, 393247, 4, 0, 393248, 4, 0, 393249, 4, 0, 393250, 7, 0, 393251, 1, 0, 458764, 26, 0, 458765, 26, 0, 458780, 10, 0, 458781, 9, 0, 458782, 9, 0, 458783, 9, 0, 458784, 9, 0, 458785, 9, 0, 458786, 9, 0, 458787, 11, 0, 524304, 26, 0, 524305, 26, 0, 786454, 0, 0, 786455, 4, 0, 786456, 4, 0, 786457, 4, 0, 786458, 4, 0, 786459, 5, 0, 851990, 10, 0, 851991, 9, 0, 851992, 9, 0, 851993, 9, 0, 851994, 9, 0, 851995, 11, 0, 983050, 0, 0, 983051, 5, 0, 1048586, 7, 0, 1048587, 1, 0, 1114122, 7, 0, 1114123, 1, 0, 1179658, 7, 0, 1179659, 1, 0, 1179681, 0, 0, 1179682, 5, 0, 1245194, 7, 0, 1245195, 1, 0, 1245217, 7, 0, 1245218, 1, 0, 1310730, 7, 0, 1310731, 1, 0, 1310745, 0, 0, 1310746, 4, 0, 1310747, 4, 0, 1310748, 4, 0, 1310749, 5, 0, 1310753, 7, 0, 1310754, 1, 0, 1376266, 7, 0, 1376267, 1, 0, 1376281, 10, 0, 1376282, 9, 0, 1376283, 9, 0, 1376284, 9, 0, 1376285, 11, 0, 1376289, 7, 0, 1376290, 1, 0, 1441802, 7, 0, 1441803, 1, 0, 1441809, 0, 0, 1441810, 4, 0, 1441811, 4, 0, 1441812, 4, 0, 1441813, 5, 0, 1441825, 7, 0, 1441826, 1, 0, 1507338, 7, 0, 1507339, 1, 0, 1507345, 10, 0, 1507346, 9, 0, 1507347, 9, 0, 1507348, 9, 0, 1507349, 11, 0, 1507361, 7, 0, 1507362, 1, 0, 1572874, 7, 0, 1572875, 1, 0, 1572897, 7, 0, 1572898, 1, 0, 1638410, 7, 0, 1638411, 1, 0, 1638412, 4, 0, 1638413, 4, 0, 1638414, 5, 0, 1638433, 7, 0, 1638434, 1, 0, 1703946, 7, 0, 1703947, 8, 0, 1703948, 8, 0, 1703949, 8, 0, 1703950, 1, 0, 1703969, 7, 0, 1703970, 1, 0, 1769482, 7, 0, 1769483, 8, 0, 1769484, 8, 0, 1769485, 8, 0, 1769486, 1, 0, 1769487, 4, 0, 1769488, 4, 0, 1769489, 4, 0, 1769490, 4, 0, 1769491, 4, 0, 1769492, 4, 0, 1769493, 4, 0, 1769494, 4, 0, 1769495, 4, 0, 1769496, 4, 0, 1769497, 4, 0, 1769498, 4, 0, 1769499, 4, 0, 1769500, 4, 0, 1769501, 4, 0, 1769502, 4, 0, 1769503, 4, 0, 1769504, 4, 0, 1769505, 7, 0, 1769506, 1, 0, 1835018, 10, 0, 1835019, 9, 0, 1835020, 9, 0, 1835021, 9, 0, 1835022, 9, 0, 1835023, 9, 0, 1835024, 9, 0, 1835025, 9, 0, 1835026, 9, 0, 1835027, 9, 0, 1835028, 9, 0, 1835029, 9, 0, 1835030, 9, 0, 1835031, 9, 0, 1835032, 9, 0, 1835033, 9, 0, 1835034, 9, 0, 1835035, 9, 0, 1835036, 9, 0, 1835037, 9, 0, 1835038, 9, 0, 1835039, 9, 0, 1835040, 9, 0, 1835041, 9, 0, 1835042, 11, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 263.221, 104.756 )
+
+[node name="Traps" type="Node" parent="."]
+
+[node name="saw2" parent="Traps" instance=ExtResource( 3 )]
+position = Vector2( 560, 432 )
+
+[node name="saw3" parent="Traps" instance=ExtResource( 3 )]
+position = Vector2( 520, 304 )
+
+[node name="spike" parent="Traps" instance=ExtResource( 4 )]
+position = Vector2( 456, 223 )
+rotation = 3.14159
+
+[node name="spike2" parent="Traps" instance=ExtResource( 4 )]
+position = Vector2( 298, 336 )
+
+[node name="spike3" parent="Traps" instance=ExtResource( 4 )]
+position = Vector2( 583, 255 )
+rotation = 3.14159
+
+[node name="spike4" parent="Traps" instance=ExtResource( 4 )]
+position = Vector2( 614, 255 )
+rotation = 3.14159
+
+[node name="spike5" parent="Traps" instance=ExtResource( 4 )]
+position = Vector2( 646, 255 )
+rotation = 3.14159
+
+[node name="spike6" parent="Traps" instance=ExtResource( 4 )]
+position = Vector2( 678, 255 )
+rotation = 3.14159
+
+[node name="spike7" parent="Traps" instance=ExtResource( 4 )]
+position = Vector2( 682, 64 )
+
+[node name="spike8" parent="Traps" instance=ExtResource( 4 )]
+position = Vector2( 392, 112 )
+rotation = 1.5708
+
+[node name="checkpoint" parent="." instance=ExtResource( 5 )]
+position = Vector2( 215.221, -47.244 )
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="coins" type="Node" parent="."]
+
+[node name="coin" parent="coins" instance=ExtResource( 7 )]
+position = Vector2( 456, 160 )
+
+[node name="coin2" parent="coins" instance=ExtResource( 7 )]
+position = Vector2( 448, 448 )
+
+[node name="coin3" parent="coins" instance=ExtResource( 7 )]
+position = Vector2( 416, 448 )
+
+[node name="coin4" parent="coins" instance=ExtResource( 7 )]
+position = Vector2( 224, 128 )
+
+[connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coins/coin3" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coins/coin4" to="HUD" method="_on_coin_coin_collected"]

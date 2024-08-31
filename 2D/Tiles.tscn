@@ -1,0 +1,301 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://tiles/tiles/tile030.png" type="Texture" id=1]
+[ext_resource path="res://tiles/tiles/tile094.png" type="Texture" id=2]
+[ext_resource path="res://tiles/tiles/tile097.png" type="Texture" id=3]
+[ext_resource path="res://tiles/tiles/tile006.png" type="Texture" id=4]
+[ext_resource path="res://tiles/tiles/tile008.png" type="Texture" id=5]
+[ext_resource path="res://tiles/tiles/tile010.png" type="Texture" id=6]
+[ext_resource path="res://tiles/tiles/tile007.png" type="Texture" id=7]
+[ext_resource path="res://tiles/tiles/tile028.png" type="Texture" id=8]
+[ext_resource path="res://tiles/tiles/tile029.png" type="Texture" id=9]
+[ext_resource path="res://tiles/tiles/tile052.png" type="Texture" id=10]
+[ext_resource path="res://tiles/tiles/tile051.png" type="Texture" id=11]
+[ext_resource path="res://tiles/tiles/tile050.png" type="Texture" id=12]
+[ext_resource path="res://tiles/tiles/tile127.png" type="Texture" id=13]
+[ext_resource path="res://tiles/tiles/tile129.png" type="Texture" id=14]
+[ext_resource path="res://tiles/tiles/tile130.png" type="Texture" id=15]
+[ext_resource path="res://tiles/tiles/tile131.png" type="Texture" id=16]
+[ext_resource path="res://tiles/tiles/tile128.png" type="Texture" id=17]
+[ext_resource path="res://tiles/tiles/tile125.png" type="Texture" id=18]
+[ext_resource path="res://tiles/tiles/tile124.png" type="Texture" id=19]
+[ext_resource path="res://tiles/tiles/tile145.png" type="Texture" id=20]
+[ext_resource path="res://tiles/tiles/tile123.png" type="Texture" id=21]
+[ext_resource path="res://tiles/tiles/tile146.png" type="Texture" id=22]
+[ext_resource path="res://tiles/tiles/tile102.png" type="Texture" id=23]
+[ext_resource path="res://tiles/tiles/tile100.png" type="Texture" id=24]
+[ext_resource path="res://tiles/tiles/tile101.png" type="Texture" id=25]
+[ext_resource path="res://tiles/tiles/tile034.png" type="Texture" id=26]
+[ext_resource path="res://tiles/tiles/tile036.png" type="Texture" id=27]
+[ext_resource path="res://tiles/tiles/tile035.png" type="Texture" id=28]
+
+[node name="Tiles" type="Node2D"]
+
+[node name="Tile Green" type="Sprite" parent="."]
+position = Vector2( 320, 185 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile Green"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile Green/StaticBody2D"]
+position = Vector2( -1, 0 )
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile Brown" type="Sprite" parent="."]
+position = Vector2( 326, 252 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Tile Brown"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile Brown/StaticBody2D2"]
+position = Vector2( -1, 0 )
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile red" type="Sprite" parent="."]
+position = Vector2( 361, 188 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Tile red"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile red/StaticBody2D3"]
+position = Vector2( -1, 0 )
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile Brown red" type="Sprite" parent="."]
+position = Vector2( 365, 251 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Tile Brown red"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile Brown red/StaticBody2D4"]
+position = Vector2( -1, 0 )
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile007" type="Sprite" parent="."]
+position = Vector2( 480, 145 )
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Tile007"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile007/StaticBody2D5"]
+position = Vector2( -1, 0 )
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile008" type="Sprite" parent="."]
+position = Vector2( 517, 188 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Tile008"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile008/StaticBody2D6"]
+position = Vector2( -1, 0 )
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile010" type="Sprite" parent="."]
+position = Vector2( 484, 256 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Tile010"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile010/StaticBody2D7"]
+position = Vector2( -1, 0 )
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile028" type="Sprite" parent="."]
+position = Vector2( 155, 317 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Tile028"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile028/StaticBody2D8"]
+position = Vector2( -1, 0 )
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile029" type="Sprite" parent="."]
+position = Vector2( 274, 313 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile029"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile029/StaticBody2D9"]
+position = Vector2( -1, 0 )
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile030" type="Sprite" parent="."]
+position = Vector2( 274, 313 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile030"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile030/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile031" type="Sprite" parent="."]
+position = Vector2( 274, 313 )
+texture = ExtResource( 12 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile031"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile031/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile032" type="Sprite" parent="."]
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile032"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile032/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile033" type="Sprite" parent="."]
+position = Vector2( 120, 88 )
+texture = ExtResource( 13 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile033"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile033/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile034" type="Sprite" parent="."]
+position = Vector2( 272, 80 )
+texture = ExtResource( 17 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile034"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile034/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile035" type="Sprite" parent="."]
+position = Vector2( 40, 72 )
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile035"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile035/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile036" type="Sprite" parent="."]
+position = Vector2( 208, 144 )
+texture = ExtResource( 15 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile036"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile036/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile037" type="Sprite" parent="."]
+position = Vector2( 80, 184 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile037"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile037/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile038" type="Sprite" parent="."]
+position = Vector2( 56, 248 )
+texture = ExtResource( 21 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile038"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile038/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile039" type="Sprite" parent="."]
+position = Vector2( 56, 248 )
+texture = ExtResource( 19 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile039"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile039/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile040" type="Sprite" parent="."]
+position = Vector2( 56, 248 )
+texture = ExtResource( 18 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile040"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile040/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile041" type="Sprite" parent="."]
+position = Vector2( 56, 248 )
+texture = ExtResource( 20 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile041"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile041/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile042" type="Sprite" parent="."]
+position = Vector2( 56, 248 )
+texture = ExtResource( 22 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile042"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile042/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile043" type="Sprite" parent="."]
+position = Vector2( 56, 248 )
+texture = ExtResource( 20 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile043"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile043/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile044" type="Sprite" parent="."]
+position = Vector2( 56, 248 )
+texture = ExtResource( 24 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile044"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile044/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile045" type="Sprite" parent="."]
+position = Vector2( 56, 248 )
+texture = ExtResource( 25 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile045"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile045/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile046" type="Sprite" parent="."]
+position = Vector2( 56, 248 )
+texture = ExtResource( 23 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile046"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile046/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile047" type="Sprite" parent="."]
+position = Vector2( 128, 296 )
+texture = ExtResource( 26 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile047"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile047/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile048" type="Sprite" parent="."]
+position = Vector2( 128, 296 )
+texture = ExtResource( 27 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile048"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile048/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
+
+[node name="Tile049" type="Sprite" parent="."]
+position = Vector2( 128, 296 )
+texture = ExtResource( 28 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tile049"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile049/StaticBody2D9"]
+polygon = PoolVector2Array( -7, -8, 1, -8, 9, -8, 9, 0, 9, 8, -7, 8 )
