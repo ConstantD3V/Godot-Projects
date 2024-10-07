@@ -14,6 +14,10 @@ config/name="Platformer (GODOT 4)"
 run/main_scene="res://Scenes/world.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 
+[autoload]
+
+AudioStreamPlayer2d="*res://Scenes/audio_stream_player_2d.tscn"
+
 [display]
 
 window/size/viewport_width=1280

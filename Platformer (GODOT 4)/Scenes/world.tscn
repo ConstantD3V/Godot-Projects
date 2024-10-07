@@ -1,9 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://xwo63gw2fpxh"]
+[gd_scene load_steps=15 format=3 uid="uid://xwo63gw2fpxh"]
 
+[ext_resource type="Script" path="res://Scripts/game_mngr.gd" id="1_2en35"]
 [ext_resource type="PackedScene" uid="uid://bsubmc8qvokat" path="res://Scenes/platform.tscn" id="1_s0g1r"]
 [ext_resource type="PackedScene" uid="uid://tglioom7n6ub" path="res://Scenes/killzone.tscn" id="1_sypn0"]
 [ext_resource type="Texture2D" uid="uid://b8lx57kew0p0v" path="res://assests/sprites/world_tileset.png" id="2_587xf"]
 [ext_resource type="PackedScene" uid="uid://dy1k1x2k05vyv" path="res://Scenes/player.tscn" id="2_lrpql"]
+[ext_resource type="FontFile" uid="uid://d1qgp2mp6guq7" path="res://assests/fonts/PixelOperator8.ttf" id="2_qa6ik"]
 [ext_resource type="PackedScene" uid="uid://d2bpvpkinprfp" path="res://Scenes/Coin.tscn" id="4_ljfch"]
 [ext_resource type="PackedScene" uid="uid://cdh8x0wcp341s" path="res://Scenes/enemy.tscn" id="6_m2kk3"]
 
@@ -215,6 +217,23 @@ _data = {
 
 [node name="World" type="Node2D"]
 
+[node name="GameMngr" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_2en35")
+
+[node name="score" type="Label" parent="GameMngr"]
+offset_left = 515.0
+offset_top = 220.0
+offset_right = 712.0
+offset_bottom = 243.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("2_qa6ik")
+theme_override_font_sizes/font_size = 8
+text = "You have collected x coins"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
 [node name="Killzone" parent="." instance=ExtResource("1_sypn0")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
@@ -257,3 +276,5 @@ autoplay = "position"
 [node name="Enemy" parent="." instance=ExtResource("6_m2kk3")]
 z_index = 2
 position = Vector2(399, 254)
+
+[node name="label" type="Node" parent="."]
