@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://cdh8x0wcp341s"]
+
+[ext_resource type="Texture2D" uid="uid://qdnlhi7uq3uk" path="res://assests/sprites/slime_green.png" id="1_76rhu"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_cnsk2"]
+[ext_resource type="PackedScene" uid="uid://tglioom7n6ub" path="res://Scenes/killzone.tscn" id="1_t2jnk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3153g"]
+size = Vector2(12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb464"]
+atlas = ExtResource("1_76rhu")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_judem"]
+atlas = ExtResource("1_76rhu")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkinr"]
+atlas = ExtResource("1_76rhu")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2eipr"]
+atlas = ExtResource("1_76rhu")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qwf6p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb464")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_judem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkinr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2eipr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}]
+
+[node name="Enemy" type="Node2D"]
+script = ExtResource("1_cnsk2")
+
+[node name="Killzone" parent="." instance=ExtResource("1_t2jnk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_3153g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qwf6p")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.990716
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+visible = false
+position = Vector2(0, 5)
+target_position = Vector2(14, 0)
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+visible = false
+position = Vector2(0, 5)
+target_position = Vector2(-14, 0)
+
+[connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]

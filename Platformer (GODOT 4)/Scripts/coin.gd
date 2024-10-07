@@ -1,0 +1,10 @@
+extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+
+
+
+func _on_body_entered(body):
+	print("+1 Coin")
+	queue_free()
