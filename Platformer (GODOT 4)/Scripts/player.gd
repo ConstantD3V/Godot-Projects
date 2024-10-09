@@ -35,8 +35,3 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
-
-func _on_killzone_body_exited(body):
-	if is_on_floor():
-		$AnimatedSprite2D.play("Hit")
